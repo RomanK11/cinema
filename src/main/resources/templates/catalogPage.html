@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Cinema</title>
+    <link rel="stylesheet" href="/css/filmStyle.css">
+</head>
+<body>
+    <div th:insert="~{header :: header}"></div>
+
+    <section class="previews">
+        <div class="name" th:each="preview : ${previews}" style="border: 3px solid rgb(255, 255, 255); padding: 70px; width: 180px; height: 180px; margin-left: 260pt; margin-top: 50pt;">
+                <h3 th:text="${preview.title}"></h3>
+                <img th:src="${preview.picture}">
+                <h3 th:text="${preview.theme}"></h3>
+        </div>
+    </section> 
+
+    <div th:insert="~{footer :: footer}"></div>
+        <script src="/JS/scripts.js"></script>  
+</body>
+</html>
