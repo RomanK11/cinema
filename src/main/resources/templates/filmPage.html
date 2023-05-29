@@ -9,17 +9,19 @@
 </head>
 <body>
     <div th:insert="~{header :: header}"></div>
+    <form method="get" th:object="${film}">
         <section class="video">
             <div class="player">
                 <ul>
                     <tr class="name" th:each="video : ${videos}">
                         <h3 style="font-size: 24px; color: white; text-align: center" th:text="${video.title}"></h3>
-                        <p style="font-size: 16px; color: white; text-align: center" th:text="${video.genre}"></p>
                         <video th:src="${video.link}" controls></video>
                     </tr>
                 </ul>
             </div>
             </section>
+    </form>
+        
             <section class="stars">
             <div class="button">
                 <button class="dobav"><div class="plus"></div></button>
