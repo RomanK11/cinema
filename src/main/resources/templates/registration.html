@@ -4,25 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Cinema</title>
-    <link rel="stylesheet" href="/css/filmStyle.css">
+    <title>registration</title>
+    <link rel="stylesheet" href="/css/registration.css">
 </head>
 <body>
-    <div th:insert="~{header :: header}"></div>
+    <section>
+        <div class="container">
+        <form method="post" th:object="${user}">
+            <h1>Регистрация</h1>
 
-    <form method="post" th:object="${user}">
-            <div>
-                <h3>username</h3>
-                <input th:field="*{username}" type="text">
-            </div>
-            <div>
-                <h3>password</h3>
-                <input th:type="password" th:field="*{password}" type="text">
-            </div>
+            <label for="username">Имя пользователя</label>
+            <input type="text" placeholder="Введите имя пользователя" id="username" required th:field="*{username}">
 
-            <button>Добавить</button>
-    </form>
+            <label for="password">Пароль</label>
+            <input type="password" placeholder="Введите пароль" id="password" required th:field="*{password}">
 
-        <div th:insert="~{footer :: footer}"></div>
+            <label for="confirm_password">Подтверждение пароля</label>
+            <input type="password" placeholder="Подтвердите пароль" id="confirm_password" required>
+
+            <button type="submit">Создать аккаунт</button>
+
+        </form>
+    </div>
+    </section>
+    
+    <script src="index.js"></script>
 </body>
 </html>
