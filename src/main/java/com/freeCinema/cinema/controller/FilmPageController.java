@@ -1,4 +1,4 @@
-package com.freeCinema.cinema.controllers;
+package com.freeCinema.cinema.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.freeCinema.cinema.models.FilmPage;
-import com.freeCinema.cinema.repositories.FilmPageRepository;
+import com.freeCinema.cinema.model.FilmPage;
+import com.freeCinema.cinema.repository.FilmPageRepository;
 
 @Controller
 @RequestMapping(path = "/film")

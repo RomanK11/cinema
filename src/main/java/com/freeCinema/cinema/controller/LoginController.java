@@ -1,4 +1,4 @@
-package com.freeCinema.cinema.controllers;
+package com.freeCinema.cinema.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

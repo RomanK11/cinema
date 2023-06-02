@@ -1,24 +1,22 @@
-package com.freeCinema.cinema.models;
+package com.freeCinema.cinema.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 @Data
 @AllArgsConstructor
-@Table("TEST")
-public class Home {
+@NoArgsConstructor
+@Table("USERS")
+public class User {
     @Id
     private Long id;
 
-    private String email;
-
-    private String password;
-
     private String username;
 
-    private Integer age;
+    private String password;
 }

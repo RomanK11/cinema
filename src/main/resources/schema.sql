@@ -15,3 +15,9 @@ CREATE TABLE IF NOT EXISTS films(
 
     FOREIGN KEY (preview_id) REFERENCES filmPreview(id) ON DELETE CASCADE
 );
+
+CREATE TABLE IF NOT EXISTS users(
+    id IDENTITY NOT NULL,
+    username VARCHAR NOT NULL,
+    password VARCHAR NOT NULL
+);

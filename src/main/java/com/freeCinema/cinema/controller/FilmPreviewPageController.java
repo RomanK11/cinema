@@ -1,4 +1,4 @@
-package com.freeCinema.cinema.controllers;
+package com.freeCinema.cinema.controller;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.freeCinema.cinema.models.FilmPreview;
-import com.freeCinema.cinema.repositories.FilmPreviewRepository;
+import com.freeCinema.cinema.model.FilmPreview;
+import com.freeCinema.cinema.repository.FilmPreviewRepository;
 
 @Controller
 public class FilmPreviewPageController {
