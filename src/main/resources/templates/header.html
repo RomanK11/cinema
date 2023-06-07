@@ -11,10 +11,11 @@
     <header class="header">
     <div class="nav">
         <a href="/" class="glafstr"><img src="/images/Logo.png" class="logo" id="logo"></a>
-        <form action="#" class="gde">
-        <input type="text" placeholder="Поиск.." name="search" class="gde">
-        <button type="submit">Отправить</button>
-      </form>
+        <form action="/search" method="POST">
+            <label for="query">Search:</label>
+            <input type="text" name="query" id="query">
+            <button type="submit">Search</button>
+        </form>
             <a href="/catalog" class="menu" id="menu">
                 Каталог
             </a>

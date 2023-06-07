@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<ht lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <!-- <section class="previews" th:object="${search}">
+        <div>
+                <a th:text="${search.title}"></a>
+                <a><img th:src="${search.picture}"></a>
+                <a th:text="${search.theme}"></a>
+        </div>
+    </section>  -->
+        <div th:each="book : ${books}">
+                <h3 th:href="'/film/videos/' + ${preview.id}" th:text = "${book.title}"></h3>
+                <a th:href="'/film/videos/' + ${preview.id}"><img th:src="${book.picture}"></a>
+                <a th:href="'/film/videos/' + ${preview.id}" th:text = "${book.theme}"></a>
+        </div>
+</body>
+</html>
