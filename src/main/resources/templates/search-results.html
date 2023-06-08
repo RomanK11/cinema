@@ -3,20 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Search Results</title>
+    <link rel="stylesheet" href="/css/filmStyle.css">
 </head>
 <body>
-    <h1>Search Results</h1>
-    <!-- <section class="previews" th:object="${search}">
-        <div>
-                <a th:text="${search.title}"></a>
-                <a><img th:src="${search.picture}"></a>
-                <a th:text="${search.theme}"></a>
-        </div>
-    </section>  -->
-        <div th:each="book : ${books}">
-                <h3 th:href="'/film/videos/' + ${preview.id}" th:text = "${book.title}"></h3>
-                <a th:href="'/film/videos/' + ${preview.id}"><img th:src="${book.picture}"></a>
-                <a th:href="'/film/videos/' + ${preview.id}" th:text = "${book.theme}"></a>
-        </div>
+    <div th:insert="~{header :: header}"></div>
+    <h1 style="text-align: center; margin-top: 15px; color: white;">Search Results</h1>
+    <div style="text-align: center; margin-top: 150px; color: white;" th:each="book : ${books}">
+        <h3 th:href="'/film/videos/' + ${book.id}" th:text = "${book.title}"></h3>
+        <a th:href="'/film/videos/' + ${book.id}"><img th:src="${book.picture}"></a>
+        <a th:href="'/film/videos/' + ${book.id}" th:text = "${book.theme}"></a>
+    </div>
 </body>
 </html>
