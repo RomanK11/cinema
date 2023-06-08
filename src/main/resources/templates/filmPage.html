@@ -9,17 +9,15 @@
 </head>
 <body>
     <div th:insert="~{header :: header}"></div>
+    <section>
+
+    </section>
     <form method="get" th:object="${film}">
-        <section class="video">
-            <div style="text-align: center;" class="player">
-                <ul style="text-align: center;">
-                    <tr class="name" th:each="video : ${videos}">
-                        <h3 style="font-size: 24px; color: white; text-align: center" th:text="${video.title}"></h3>
-                        <video th:src="${video.link}" controls></video>
-                    </tr>
-                </ul>
+            <div th:each="video : ${videos}">
+                    <h3 style="font-size: 24px; color: white; text-align: center; margin-left: 1400px;" th:text="${video.title}"></h3>
+                    <video style="margin-left: 1400px;" th:src="${video.link}" controls></video>
             </div>
-            </section>
+            
     </form>
         <div th:insert="~{footer :: footer}"></div>
         <script src="/JS/scripts.js"></script>

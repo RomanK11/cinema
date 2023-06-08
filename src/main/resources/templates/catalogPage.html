@@ -12,9 +12,9 @@
 
     <section class="previews">
         <div class="name" th:each="preview : ${previews}" style="border: 3px solid rgb(255, 255, 255); width: 220px; height: 300px; margin-left: 265pt; margin-top: 50pt; text-align: center; float: left;">
-                <a style="color: #000 !important; text-decoration: none" th:href="'/film/videos/' + ${preview.id}" th:text="${preview.title}"></a>
+                <a style="color: #ffffff !important; text-decoration: none" th:href="'/film/videos/' + ${preview.id}" th:text="${preview.title}"></a>
                 <a th:href="'/film/videos/' + ${preview.id}"><img th:src="${preview.picture}"></a>
-                <a style="color: #000 !important; text-decoration: none" th:href="'/film/videos/' + ${preview.id}" th:text="${preview.theme}"></a>
+                <a style="color: #ffffff !important; text-decoration: none" th:href="'/film/videos/' + ${preview.id}" th:text="${preview.theme}"></a>
         </div>
     </section> 
 
