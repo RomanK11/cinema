@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="/css/homeStyle.css">
 </head>
 <body>
-    <div th:insert="~{header :: header}"></div>
    <section>
-        <button>login</button>
+        <form method="post" th:object="${user}">
+            <h1>Вход</h1>
+
+            <label for="username">Имя пользователя</label>
+            <input type="text" placeholder="Введите имя пользователя" id="username" required th:field="*{username}">
+
+            <label for="password">Пароль</label>
+            <input type="password" placeholder="Введите пароль" id="password" required th:field="*{password}">
+            <button type="submit">Войти</button>
+        </form>
    </section>
-    <div th:insert="~{footer :: footer}"></div>
 </body>
 </html>
