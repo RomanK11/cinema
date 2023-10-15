@@ -7,11 +7,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table("FILMS")
+@Table("filmpage")
 public class FilmPage {
     @Id
     private Integer id;
