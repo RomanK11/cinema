@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<body>
+    <section>
+            <h1>Панель администрацию</h1>
+            <h2>Фильмы</h2>
+
+            <ul>
+                <li th:each="film : ${films}">
+                    <span th:text="${film.title}"></span>
+                    <span th:text="${film.picture}"></span>
+                    <span th:text="${film.theme}"></span>
+                </li>
+            </ul>
+    </section>
+    <section>
+        <form method="post" th:object="${film}">
+            <h1>Регистрация</h1>
+
+            <label for="title">Название фильма</label>
+            <input type="text" placeholder="Введите название фильма" required th:field="*{title}">
+
+            <label for="picture">Ссылка на фильм на пк</label>
+            <input placeholder="Введите ссылку" required th:field="*{picture}">
+
+            <label for="theme">Тема</label>
+            <input placeholder="Введите жанр" required th:field="*{theme}">
+
+            <button type="submit">Добавить</button>
+
+        </form>
+    </section>
+</body>
+</html>
