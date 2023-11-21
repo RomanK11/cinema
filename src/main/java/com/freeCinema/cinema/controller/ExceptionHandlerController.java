@@ -13,7 +13,6 @@ import org.springframework.web.context.request.WebRequest;
 
 import com.freeCinema.cinema.service.InternalServerException;
 
-
 @ControllerAdvice
 public class ExceptionHandlerController {
     @ExceptionHandler(InternalServerException.class)

@@ -13,4 +13,7 @@ public interface FilmPreviewRepository extends CrudRepository<FilmPreview, Long>
     @Query("SELECT * FROM filmpreview WHERE TITLE = :title AND PICTURE = :picture AND THEME = :theme")
     Iterable<FilmPreview> searchFilmsByAllArgs(@Param("title") String title, @Param("picture") String picture,
             @Param("theme") String theme);
+
+    @Query("SELECT * FROM FILMPREVIEW WHERE id = :id")
+    Iterable<FilmPreview> searchById(@Param("id") Long id);
 }

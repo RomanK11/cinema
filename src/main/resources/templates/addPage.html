@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Cinema</title>
+    <link rel="stylesheet" href="/css/filmStyle.css">
+</head>
+<body>
+    <div th:each="preview : ${previews}">
+        <h2 th:text="${preview.title}"></h2>
+    </div>
+    <section>
+        <form method="post" th:object="${lib}">
+            <!-- <label for="title">Имя пользователя</label>
+            <input type="text" placeholder="Введите имя пользователя" id="title" required th:field="*{title}">
+
+            <label for="password">Пароль</label>
+            <input type="text" placeholder="Введите пароль" id="preview_id" required th:field="*{preview_id}">
+             -->
+            <button type="submit">add</button>
+        </form>
+    </section>
+        <script src="/JS/scripts.js"></script>
+</body>
+</html>
